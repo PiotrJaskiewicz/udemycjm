@@ -16,15 +16,15 @@ public class Main {
                 break;
         }
 
-        String month = "january";
-        switch (month) {
-            case "January": case "january": case "JANUARY":
+        String month = "November";
+        switch (month.toLowerCase()) {
+            case "january":
                 System.out.println("Jan");
                 break;
-            case "June":
+            case "june":
                 System.out.println("June");
                 break;
-            case "November":
+            case "november":
                 System.out.println("Nov");
                 break;
             default:
