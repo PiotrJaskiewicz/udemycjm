@@ -2,7 +2,7 @@ package pl.pjaskiewicz.udemy.cjm.sec6;
 
 public class Main {
     public static void main(String[] args) {
-        
+
         int switchValue = 3;
         switch (switchValue) {
             case 1:
