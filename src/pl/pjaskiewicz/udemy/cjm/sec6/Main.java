@@ -16,5 +16,20 @@ public class Main {
                 break;
         }
 
+        String month = "January";
+        switch (month) {
+            case "l":
+                System.out.println("Jan");
+                break;
+            case "June":
+                System.out.println("June");
+                break;
+            case "November":
+                System.out.println("Nov");
+                break;
+            default:
+                System.out.println("Not sure");
+        }
+
     }
 }
