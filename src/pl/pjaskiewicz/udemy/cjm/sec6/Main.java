@@ -16,9 +16,9 @@ public class Main {
                 break;
         }
 
-        String month = "January";
+        String month = "january";
         switch (month) {
-            case "l":
+            case "January": case "january": case "JANUARY":
                 System.out.println("Jan");
                 break;
             case "June":
@@ -29,6 +29,22 @@ public class Main {
                 break;
             default:
                 System.out.println("Not sure");
+        }
+
+        char charValue = 'E';
+        switch (charValue){
+            case 'A':
+                System.out.println("A was found");
+                break;
+            case 'B':
+                System.out.println("B was found");
+                break;
+            case 'C': case 'D': case 'E':
+                System.out.println(charValue + " was found");
+                break;
+                default:
+                    System.out.println("Could not find A, B, C, D or E");
+                    break;
         }
 
     }
