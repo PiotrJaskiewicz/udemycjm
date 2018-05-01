@@ -1,4 +1,4 @@
-package pl.pjaskiewicz.udemy.cjm.sec6;
+package pl.pjaskiewicz.udemy.cjm.sec6.lec33;
 
 public class Main {
     public static void main(String[] args) {
