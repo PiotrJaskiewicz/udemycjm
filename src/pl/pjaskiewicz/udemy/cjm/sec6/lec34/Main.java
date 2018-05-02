@@ -2,18 +2,19 @@ package pl.pjaskiewicz.udemy.cjm.sec6.lec34;
 
 public class Main {
     public static void main(String[] args) {
+        int j = 0;
+        for (int i = 100; i < 150; i++) {
 
-        for (int i = 2; i < 10; i++) {
             if (isPrime(i) == true) {
-                System.out.println(i);
+                j = j + 1;
+                System.out.println(j + " out of 3 prime numbers is:" + i);
 
-
-
+                if (j == 50) break;
             }
         }
     }
 
-   
+
     public static boolean isPrime(int n) {
         if (n == 1) {
             return false;
