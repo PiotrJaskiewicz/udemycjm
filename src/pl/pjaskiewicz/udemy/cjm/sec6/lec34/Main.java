@@ -3,11 +3,12 @@ package pl.pjaskiewicz.udemy.cjm.sec6.lec34;
 public class Main {
     public static void main(String[] args) {
         int count = 0;
-        for (int i = 2; i < 1000; i++){
+        for (int i = 10; i < 50; i++){
             if(isPrime(i)){
                 count++;
                 System.out.println("Number " + i + " is prime number");
-                if(count == 100){
+                if(count == 3){
+
                     System.out.println("Exiting for loop");
                     break;
                 }
@@ -17,6 +18,7 @@ public class Main {
         int j = 0;
         for (int i = 10; i < 50; i++) {
 
+<<<<<<< HEAD
             if (isPrime(i) == true) {
                 j = j + 1;
                 System.out.println(j + " out of 3 prime numbers is:" + i);
@@ -24,6 +26,7 @@ public class Main {
                 if (j == 50) break;
             }
         }*/
+
 
     }
 
