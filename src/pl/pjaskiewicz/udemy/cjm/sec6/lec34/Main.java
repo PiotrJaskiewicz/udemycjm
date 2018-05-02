@@ -3,14 +3,17 @@ package pl.pjaskiewicz.udemy.cjm.sec6.lec34;
 public class Main {
     public static void main(String[] args) {
 
-       for(int i = 2; i < 100; i++){
-           if(isPrime(i) == true){
-               System.out.println(i);
-           }
-       }
+        for (int i = 2; i < 10; i++) {
+            if (isPrime(i) == true) {
+                System.out.println(i);
 
+
+
+            }
+        }
     }
 
+   
     public static boolean isPrime(int n) {
         if (n == 1) {
             return false;
