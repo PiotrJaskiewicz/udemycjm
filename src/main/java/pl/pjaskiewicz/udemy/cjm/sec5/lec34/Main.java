@@ -8,6 +8,14 @@ public class Main {
         System.out.println("**********************");
 
         printMegaBytesAndKiloBytes(2048);
+        System.out.println("**********************");
+
+        System.out.println(bark(true,1));
+        System.out.println(bark(false,2));
+        System.out.println(bark(true,8));
+        System.out.println(bark(true,-1));
+        System.out.println(bark(true,24));
+
 
     }
 
@@ -28,6 +36,16 @@ public class Main {
             int remaider = kiloBytes % 1024;
             System.out.println(kiloBytes + " KB = " + megaBytes + " MB and " + remaider + " KB");
 
+        }
+    }
+
+    public static boolean bark(boolean barking, int hourOfday) {
+        if(hourOfday < 0 && hourOfday > 23){
+            return false;
+        }else if(barking && (((hourOfday >= 0) && (hourOfday < 8)) || ((hourOfday > 22) && (hourOfday <= 23)))){
+            return true;
+        }else {
+            return false;
         }
     }
 
