@@ -7,7 +7,7 @@ public class Main {
             if(isPrime(i)){
                 count++;
                 System.out.println("Number " + i + " is prime number");
-                if(count == 50){
+                if(count == 10){
 
                     System.out.println("Exiting for loop");
                     break;
