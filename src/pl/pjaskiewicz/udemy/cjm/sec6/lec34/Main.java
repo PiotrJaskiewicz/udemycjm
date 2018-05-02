@@ -3,20 +3,25 @@ package pl.pjaskiewicz.udemy.cjm.sec6.lec34;
 public class Main {
     public static void main(String[] args) {
 
+       for(int i = 2; i < 100; i++){
+           if(isPrime(i) == true){
+               System.out.println(i);
+           }
+       }
 
-        for (int i = 2; i < 9; i++) {
-            System.out.println("10000PLN at " + i + "% interest = " + String.format("%.1f", calculateInterest(10000, i)) + "PLN");
-        }
-
-        System.out.println("****************");
-        
-        for (int i = 8; i > 1; i--) {
-            System.out.println("10000PLN at " + i + "% interest = " + String.format("%.1f", calculateInterest(10000, i)) + "PLN");
-        }
     }
 
-    public static double calculateInterest(double amount, double interestRate) {
-        return (amount * (interestRate / 100));
+    public static boolean isPrime(int n) {
+        if (n == 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(n); i++) {//wystarczy sprawdzic do sqrt(n) bo na lewo i prawo od niego lezy tyle samo dzielnikow
+            if (n % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
 
