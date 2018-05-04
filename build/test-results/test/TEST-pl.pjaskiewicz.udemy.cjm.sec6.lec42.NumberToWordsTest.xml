@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="pl.pjaskiewicz.udemy.cjm.sec6.lec42.NumberToWordsTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-05-04T20:00:03" hostname="DESKTOP-LOCDJ4N" time="0.001">
+  <properties/>
+  <testcase name="randomNumberTest" classname="pl.pjaskiewicz.udemy.cjm.sec6.lec42.NumberToWordsTest" time="0.0"/>
+  <testcase name="negativeNumberTest" classname="pl.pjaskiewicz.udemy.cjm.sec6.lec42.NumberToWordsTest" time="0.0"/>
+  <testcase name="zeroNumberTest" classname="pl.pjaskiewicz.udemy.cjm.sec6.lec42.NumberToWordsTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
