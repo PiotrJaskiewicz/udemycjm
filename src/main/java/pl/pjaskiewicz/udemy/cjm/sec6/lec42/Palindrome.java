@@ -1,10 +1,6 @@
 package pl.pjaskiewicz.udemy.cjm.sec6.lec42;
 
 public class Palindrome {
-    public static void main(String[] args) {
-        System.out.println(isPalindrome(-111111111));
-
-    }
 
     public static boolean isPalindrome(int number) {
         int reverse = 0;
