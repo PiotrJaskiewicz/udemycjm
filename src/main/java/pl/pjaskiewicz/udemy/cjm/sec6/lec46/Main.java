@@ -3,18 +3,17 @@ package pl.pjaskiewicz.udemy.cjm.sec6.lec46;
 public class Main {
     public static void main(String[] args) {
 
-        BankAccount piotrAccount = new BankAccount();
+        BankAccount piotrAccount = new BankAccount("xsxsxsx", 123);
+        System.out.println(piotrAccount.getEmail());
         piotrAccount.setBalance(1000);
-        System.out.println(piotrAccount.getBalance() + "PLN");
 
         piotrAccount.depositFunds(550);
-        System.out.println(piotrAccount.getBalance() + "PLN");
+
 
         piotrAccount.withdrawFunds(1500);
-        System.out.println(piotrAccount.getBalance() + "PLN");
+
 
         piotrAccount.withdrawFunds(1500);
-        System.out.println(piotrAccount.getBalance() + "PLN");
     }
 
 
