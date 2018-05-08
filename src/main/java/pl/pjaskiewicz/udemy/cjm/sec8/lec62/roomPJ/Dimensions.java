@@ -11,17 +11,28 @@ public class Dimensions {
         this.length = length;
     }
 
-    public int calculateArea(){
-        int roomArea = this.length * this.width;
-        System.out.println("Room area is " + roomArea);
-        return roomArea;
+    public int calculateArea() {
+        int objectArea = this.length * this.width;
+        return objectArea;
 
     }
 
-    public int calculateVolume(){
+    public int calculateVolume() {
         int roomVolume = this.length * this.width * this.height;
         System.out.println("Room volume is " + roomVolume);
         return roomVolume;
 
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public int getLength() {
+        return length;
     }
 }
