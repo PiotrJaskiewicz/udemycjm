@@ -1,6 +1,4 @@
-package pl.pjaskiewicz.udemy.cjm.sec7.lec61;
-
-import java.sql.SQLOutput;
+package pl.pjaskiewicz.udemy.cjm.sec8.lec61;
 
 public class Monitor {
     private String model;

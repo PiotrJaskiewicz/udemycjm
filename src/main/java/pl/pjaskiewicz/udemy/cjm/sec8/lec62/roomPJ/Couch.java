@@ -1,4 +1,4 @@
-package pl.pjaskiewicz.udemy.cjm.sec7.lec62;
+package pl.pjaskiewicz.udemy.cjm.sec8.lec62.roomPJ;
 
 public class Couch {
     private Appearance appearance;

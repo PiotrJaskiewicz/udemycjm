@@ -1,6 +1,4 @@
-package pl.pjaskiewicz.udemy.cjm.sec7.lec61;
-
-import com.sun.org.apache.bcel.internal.generic.MONITORENTER;
+package pl.pjaskiewicz.udemy.cjm.sec8.lec61;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package pl.pjaskiewicz.udemy.cjm.sec7.lec61;
+package pl.pjaskiewicz.udemy.cjm.sec8.lec61;
 
 public class Case {
     private String model;
