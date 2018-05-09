@@ -2,7 +2,7 @@ package pl.pjaskiewicz.udemy.cjm.sec8.lec63;
 
 public class EnhancedPlayer {
     private String name;
-    private int hitPoints = 100;
+    private int hitPoints = 10;
     private String weapon;
 
     public EnhancedPlayer(String name, int health, String weapon) {
