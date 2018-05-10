@@ -10,7 +10,7 @@ public class EnhancedPlayer {
         if (health > 0 && health <= 100) {
             this.hitPoints = health;
         } else {
-            System.out.println("Helth value is out of the limits");
+            System.out.println("Health value is out of the limits");
         }
 
         this.weapon = weapon;
