@@ -1,6 +1,6 @@
 package pl.pjaskiewicz.udemy.cjm.sec8.lec67.PJ;
 
-public class BaseBurger {
+public class BaseBurger  {
     private String name;
     private String rollType;
     private boolean isMeat;

@@ -4,7 +4,9 @@ public class Main {
     public static void main(String[] args) {
 
         BaseBurger baseBurger = new BaseBurger("Bread", true, 6);
+        //baseBurger.lettuce.setQuantity(8); tak mozna ustawic inna wartosc
         baseBurger.burgerPriceSummary();
+
         System.out.println("*** *** ***");
 
         HealthyBurger healthyBurger = new HealthyBurger("Brown rye bread", true, 8);
