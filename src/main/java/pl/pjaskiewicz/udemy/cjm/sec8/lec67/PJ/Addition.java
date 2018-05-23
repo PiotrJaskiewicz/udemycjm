@@ -11,16 +11,17 @@ public class Addition {
         this.quantity = quantity;
     }
 
-    public String printNameIfQuantityPositive(){
-        if (this.quantity > 0){
-            return this.quantity + " x " + this.name + ", ";
-        }else
+    public String printNameIfQuantityPositive() {
+        if (this.quantity > 0) {
+            return quantity + " x " + name + "(" + price + " $)" + ", ";
+        } else
             return "";
     }
 
-    public double additionPrice(){
+    public double additionPrice() {
         return price * quantity;
     }
+
     public String getName() {
         return name;
     }

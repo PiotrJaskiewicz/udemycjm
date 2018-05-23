@@ -4,14 +4,15 @@ public class Main {
     public static void main(String[] args) {
 
         BaseBurger baseBurger = new BaseBurger("Bread", true, 6);
-        System.out.println(baseBurger.totalBaseBurgerPrice());
-        System.out.println("*************");
+        baseBurger.burgerPriceSummary();
+        System.out.println("*** *** ***");
 
         HealthyBurger healthyBurger = new HealthyBurger("Brown rye bread", true, 8);
+        healthyBurger.burgerPriceSummary();
+        System.out.println("*** *** ***");
 
-        System.out.println(healthyBurger.totalHealthBurgerPrice());
-
-
+        DeLuxBurger deLuxBurger = new DeLuxBurger("Grain Bread", true, 10);
+        deLuxBurger.burgerPriceSummary();
 
 
     }
