@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="pl.pjaskiewicz.udemy.cjm.sec6.lec42.FirstLastDigitSumTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2018-05-22T11:57:34" hostname="DESKTOP-LOCDJ4N" time="0.024">
+<testsuite name="pl.pjaskiewicz.udemy.cjm.sec6.lec42.FirstLastDigitSumTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2018-05-24T11:33:22" hostname="DESKTOP-LOCDJ4N" time="0.003">
   <properties/>
   <testcase name="negativeNumberTest" classname="pl.pjaskiewicz.udemy.cjm.sec6.lec42.FirstLastDigitSumTest" time="0.001"/>
   <testcase name="zeroNumberTest" classname="pl.pjaskiewicz.udemy.cjm.sec6.lec42.FirstLastDigitSumTest" time="0.0"/>
-  <testcase name="oneDigitNumberTest" classname="pl.pjaskiewicz.udemy.cjm.sec6.lec42.FirstLastDigitSumTest" time="0.001"/>
-  <testcase name="tenNumberTest" classname="pl.pjaskiewicz.udemy.cjm.sec6.lec42.FirstLastDigitSumTest" time="0.001"/>
+  <testcase name="oneDigitNumberTest" classname="pl.pjaskiewicz.udemy.cjm.sec6.lec42.FirstLastDigitSumTest" time="0.0"/>
+  <testcase name="tenNumberTest" classname="pl.pjaskiewicz.udemy.cjm.sec6.lec42.FirstLastDigitSumTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
