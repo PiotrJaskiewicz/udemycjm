@@ -1,4 +1,4 @@
-package pl.pjaskiewicz.udemy.cjm.sec9;
+package pl.pjaskiewicz.udemy.cjm.sec9.lec69;
 
 import javafx.scene.transform.Scale;
 
