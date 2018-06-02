@@ -1,9 +1,18 @@
 package pl.pjaskiewicz.udemy.cjm.sec8.lec67.TB;
 
+import pl.pjaskiewicz.udemy.cjm.utils.Utils;
+
+import javax.xml.bind.SchemaOutputResolver;
+
 public class Main {
+
     public static void main(String[] args) {
+        Utils.example();
+
         Hamburger hamburger = new Hamburger("Basic", "Sausage", 3.56, "white");
         double price = hamburger.itemizeHamburger();
+
+        System.out.println("*******");
         hamburger.addHamburgerAddition1("Tomato", 0.27);
         hamburger.addHamburgerAddition2("Lettuce", 0.75);
         hamburger.addHamburgerAddition3("Cheese", 1.13);

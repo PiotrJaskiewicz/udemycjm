@@ -6,7 +6,7 @@ import static org.junit.Assert.assertEquals;
 
 public class BaseBurger {
 
-    Addition lettuce = new Addition();
+    AdditionTest lettuce = new AdditionTest();
 
 
     @Test

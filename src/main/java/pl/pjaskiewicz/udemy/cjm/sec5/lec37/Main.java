@@ -16,9 +16,10 @@ public class Main {
             int finalHours = minutes / 60;
             int finalMinutes = minutes % 60;
 
-            return leadingZeros(finalHours) + "h " + leadingZeros(finalMinutes) + "m " + leadingZeros(seconds) + "s";
+            //return leadingZeros(finalHours) + "h " + leadingZeros(finalMinu
+            // tes) + "m " + leadingZeros(seconds) + "s";
 
-            /*String hoursString = finalHours + "h"; // czemu h nie przechodzi dalej? tutaj hoursString mogloby chyba być cokolwiek bo i tak ponizej nadpisujemy?
+            String hoursString = finalHours + "h"; // czemu h nie przechodzi dalej? tutaj hoursString mogloby chyba być cokolwiek bo i tak ponizej nadpisujemy?
             if (finalHours < 10) {
                 hoursString = "0" + finalHours;
             }
@@ -31,7 +32,7 @@ public class Main {
                 secondsString = "0" + seconds;
             }
 
-            return hoursString + "h " + minutesString + "m " + secondsString + "s";    */
+            return hoursString + "h " + minutesString + "m " + secondsString + "s";
 
         }
         return INVALID_VALUE_MESSAGE;
