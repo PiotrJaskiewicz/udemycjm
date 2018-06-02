@@ -12,6 +12,12 @@ public class Main {
         sorting(myArray);
         System.out.println(Arrays.toString(myArray));
 
+        int[] arrayInt = new int[5];
+        boolean[] arrayboolean = new boolean[5];
+        String[] arrayString = new String[5];
+        System.out.println(Arrays.toString(arrayInt));
+        System.out.println(Arrays.toString(arrayboolean));
+        System.out.println(Arrays.toString(arrayString));
     }
 
     public static void sorting(int[] array) {
