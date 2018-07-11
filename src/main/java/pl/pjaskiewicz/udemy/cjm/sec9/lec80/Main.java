@@ -18,7 +18,7 @@ public class Main {
     public static int[] readIntegers(int count) {
         Scanner scanner = new Scanner(System.in);
         int[] array = new int[count];
-        System.out.println("Please type " + count + " elements of your array");
+        System.out.println("Please type " + count + " numbers");
         for (int i = 0; i < count; i++) {
             array[i] = scanner.nextInt();
         }
@@ -32,7 +32,7 @@ public class Main {
                 min = array[i];
             }
         }
-        System.out.println("Minimum value from your array is: "+ min);
+        System.out.println("Minimum value from chosen numbers is: "+ min);
         return min;
     }
 
