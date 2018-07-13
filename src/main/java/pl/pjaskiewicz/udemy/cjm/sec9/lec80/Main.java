@@ -15,7 +15,8 @@ public class Main {
 
     }
 
-    private static int[] readIntegers(int count) {
+    //jak przetestować tą metodę?
+    public static int[] readIntegers(int count) {
         Scanner scanner = new Scanner(System.in);
         int[] array = new int[count];
         System.out.println("Please type " + count + " numbers");
@@ -25,7 +26,7 @@ public class Main {
         return array;
     }
 
-    private static int findMin(int[] array) {
+    public static int findMin(int[] array) {
         int min = array[0];
         for (int i = 1; i < array.length; i++) {
             if (array[i] < min) {

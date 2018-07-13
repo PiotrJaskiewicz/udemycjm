@@ -17,7 +17,8 @@ public class BankAccountTest {
 
     @Test
     public void withdrawal() {
-        fail("This test has yet to be implemented");
+        BankAccount account = new BankAccount("Piotr", "Jaskiewicz", 1000, BankAccount.CHECKING);
+        assertEquals(0, account.withdraw(1000, false),0);
     }
 
     @Test

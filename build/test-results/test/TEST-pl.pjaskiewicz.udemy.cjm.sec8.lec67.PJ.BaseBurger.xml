@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="pl.pjaskiewicz.udemy.cjm.sec8.lec67.PJ.BaseBurger" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-07-13T07:18:50" hostname="DESKTOP-LOCDJ4N" time="0.0">
+<testsuite name="pl.pjaskiewicz.udemy.cjm.sec8.lec67.PJ.BaseBurger" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-07-13T09:16:48" hostname="DESKTOP-LOCDJ4N" time="0.001">
   <properties/>
-  <testcase name="testString" classname="pl.pjaskiewicz.udemy.cjm.sec8.lec67.PJ.BaseBurger" time="0.0"/>
+  <testcase name="testString" classname="pl.pjaskiewicz.udemy.cjm.sec8.lec67.PJ.BaseBurger" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

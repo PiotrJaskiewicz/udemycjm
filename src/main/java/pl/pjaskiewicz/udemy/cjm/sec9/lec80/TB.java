@@ -15,9 +15,12 @@ public class TB {
         int returnedMin = findMin(returnedArray);
         System.out.println("min = " + returnedMin);
 
+
     }
 
+
     private static int[] readIntegers(int count) {
+
         int[] array = new int[count];
         for (int i = 0; i < array.length; i++) {
             System.out.println("Enter a number:");
@@ -26,6 +29,7 @@ public class TB {
             array[i] = number;
         }
         return array;
+
     }
 
     private static int findMin(int[] array) {

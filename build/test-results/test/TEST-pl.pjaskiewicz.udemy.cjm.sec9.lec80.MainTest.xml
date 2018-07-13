@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="pl.pjaskiewicz.udemy.cjm.sec9.lec80.MainTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-07-13T07:18:50" hostname="DESKTOP-LOCDJ4N" time="0.0">
+<testsuite name="pl.pjaskiewicz.udemy.cjm.sec9.lec80.MainTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2018-07-13T09:16:48" hostname="DESKTOP-LOCDJ4N" time="0.024">
   <properties/>
-  <testcase name="findMinTest" classname="pl.pjaskiewicz.udemy.cjm.sec9.lec80.MainTest" time="0.0"/>
+  <testcase name="findMinTest_randomNumbers" classname="pl.pjaskiewicz.udemy.cjm.sec9.lec80.MainTest" time="0.0"/>
+  <testcase name="findMinTest_positiveNumbers" classname="pl.pjaskiewicz.udemy.cjm.sec9.lec80.MainTest" time="0.001"/>
+  <testcase name="findMinTest_negativeNumbers" classname="pl.pjaskiewicz.udemy.cjm.sec9.lec80.MainTest" time="0.0"/>
+  <testcase name="findMinTest_positiveNegativeZeroNumbers" classname="pl.pjaskiewicz.udemy.cjm.sec9.lec80.MainTest" time="0.003"/>
+  <testcase name="findMinTest_onlyZeros" classname="pl.pjaskiewicz.udemy.cjm.sec9.lec80.MainTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
