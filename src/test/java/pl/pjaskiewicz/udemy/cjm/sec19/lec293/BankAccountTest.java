@@ -21,10 +21,17 @@ public class BankAccountTest {
     }
 
     @Test
-    public void getBalance() {
+    public void getBalance_deposit() {
         BankAccount account = new BankAccount("Piotr", "Jaskiewicz", 1000);
         account.deposit(200, true);
-        assertEquals(1200, account.getBalance(),0);
+        assertEquals(1200, account.getBalance(), 0);
+    }
+
+    @Test
+    public void getBalance_withdraw() {
+        BankAccount account = new BankAccount("Piotr", "Jaskiewicz", 1000);
+        account.withdraw(200, true);
+        assertEquals(800, account.getBalance(), 0);
     }
 
 }
