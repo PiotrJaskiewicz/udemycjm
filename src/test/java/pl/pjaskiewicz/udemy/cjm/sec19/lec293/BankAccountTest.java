@@ -9,7 +9,7 @@ public class BankAccountTest {
 
     @Test
     public void deposit() {
-        BankAccount account = new BankAccount("Piotr", "Jaskiewicz", 1000);
+        BankAccount account = new BankAccount("Piotr", "Jaskiewicz", 1000, BankAccount.CHECKING);
         double balance = account.deposit(200, true);
         assertEquals(1200, balance, 0);
 
@@ -22,16 +22,21 @@ public class BankAccountTest {
 
     @Test
     public void getBalance_deposit() {
-        BankAccount account = new BankAccount("Piotr", "Jaskiewicz", 1000);
+        BankAccount account = new BankAccount("Piotr", "Jaskiewicz", 1000, BankAccount.CHECKING);
         account.deposit(200, true);
         assertEquals(1200, account.getBalance(), 0);
     }
 
     @Test
     public void getBalance_withdraw() {
-        BankAccount account = new BankAccount("Piotr", "Jaskiewicz", 1000);
+        BankAccount account = new BankAccount("Piotr", "Jaskiewicz", 1000, BankAccount.CHECKING);
         account.withdraw(200, true);
         assertEquals(800, account.getBalance(), 0);
     }
 
+    @Test
+    public void isChecking_true() {
+        BankAccount account = new BankAccount("Piotr", "Jaskiewicz", 1000, BankAccount.CHECKING);
+        assertTrue( "The account is NOT a checking account",account.isChecking());
+    }
 }
