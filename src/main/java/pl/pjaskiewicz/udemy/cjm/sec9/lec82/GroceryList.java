@@ -24,6 +24,7 @@ public class GroceryList {
     public void removeGroceryItem(int position){
         String theItem = groceryList.get(position);
         groceryList.remove(position);
+        System.out.println(theItem + " was removed from your grocery list.");
     }
 
     public String findItem(String searchItem){
