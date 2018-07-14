@@ -8,7 +8,7 @@ public class TB {
     public static void main(String[] args) {
 
         Utils utils = new Utils();
-        int[] array = utils.arrayWithSubsequentNumbers(100000);
+        int[] array = utils.arrayWithSubsequentNumbers((int)Math.pow(10,7));
         System.out.println("Original array: " + Arrays.toString(array));
         reverse(array);
         System.out.println("Reversed array: " + Arrays.toString(array));
