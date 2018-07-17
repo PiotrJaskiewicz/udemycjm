@@ -24,8 +24,13 @@ public class MobilePhone {
     }
 
     public void printContacts() {
+        System.out.println("Contact list");
         for (int i = 0; i < myContacts.size(); i++) {
-            System.out.println(myContacts.get(i));
+            System.out.println((i + 1) + "." +
+                    this.myContacts.get(i).getName() + " -> " +
+                    this.myContacts.get(i).getPhoneNumber());
+
+            //System.out.println(myContacts.get(i)); //to też działa. Metoda toString jest nadpisana w klasie contact
         }
     }
 
@@ -38,15 +43,27 @@ public class MobilePhone {
         return true;
     }
 
-    public boolean updateContact(Contact oldContact, Contact newContact){
+    public boolean updateContact(Contact oldContact, Contact newContact) {
         int foundPosition = findContact(oldContact);
-        if(foundPosition<0){
+        if (foundPosition < 0) {
             System.out.println(oldContact.getName() + " was not found.");
             return false;
         }
         this.myContacts.set(foundPosition, newContact);
         System.out.println(oldContact.getName() + " was replaced with " + newContact.getName());
         return true;
+    }
+
+    public boolean removeContact(Contact contact) {
+        int foundPosition = findContact(contact);
+        if (foundPosition < 0) {
+            System.out.println(contact.getName() + " was not found.");
+            return false;
+        }
+        this.myContacts.remove(foundPosition);
+        System.out.println(contact.getName() + ", was deleted.");
+        return true;
+
     }
 
     private int findContact(Contact contact) {
@@ -61,6 +78,14 @@ public class MobilePhone {
             }
         }
         return -1;
+    }
+
+
+    public String queryContact(Contact contact) {
+        if (findContact(contact) >= 0) {
+            return contact.getName();
+        }
+        return null;
     }
 
 }
