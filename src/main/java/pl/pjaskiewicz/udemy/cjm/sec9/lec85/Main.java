@@ -1,6 +1,7 @@
 package pl.pjaskiewicz.udemy.cjm.sec9.lec85;
 
 import com.sun.org.apache.xalan.internal.xsltc.dom.SimpleResultTreeImpl;
+import pl.pjaskiewicz.udemy.cjm.utils.Utils;
 
 import java.util.Scanner;
 
@@ -53,8 +54,63 @@ public class Main {
         System.out.println("Enter contact phone number: ");
         String phoneNumber = scanner.nextLine();
         Contact newContact = Contact.createContact(name, phoneNumber);
-        mobilePhone.addNewContact(newContact);
+        if (mobilePhone.addNewContact(newContact)) {
+            System.out.println("New contact added. Name: " + name + ", phone number:" + phoneNumber);
+        } else {
+            System.out.println("Cannot add, " + name + " already on file");
+        }
 
+    }
+
+    private static void updateContact() {
+        System.out.println("Enter existing contact name:");
+        String name = scanner.nextLine();
+        Contact existingContactRecord = mobilePhone.queryContact(name);
+        if (existingContactRecord == null) {
+            System.out.println("Contact not found.");
+            return; //co wykonuje ta komenda?
+        }
+        System.out.println("Enter new contact name: ");
+        String newName = scanner.nextLine();
+        System.out.println("Enter new phone number: ");
+        String newPhoneNumber = scanner.nextLine();
+        Contact newContact = Contact.createContact(newName, newPhoneNumber); // czemu nie w ten sposób? Contact contact = new Contact(newName,newPhoneNumber);
+        // Utils utils = Utils.arrayWithSubsequentNumbers(5); //czemu to nie działa?
+        if (mobilePhone.updateContact(existingContactRecord, newContact)) {
+            System.out.println("Sucesfully updated record");
+        } else {
+            System.out.println("Error updating record");
+        }
+    }
+
+    private static void removeContact() {
+        System.out.println("Enter existing contact name:");
+        String name = scanner.nextLine();
+        Contact existingContactRecord = mobilePhone.queryContact(name);
+        if (existingContactRecord == null) {
+            System.out.println("Contact not found.");
+            return; //co wykonuje ta komenda?
+        }
+
+        if (mobilePhone.removeContact(existingContactRecord)) {
+            System.out.println("Successfully deleted");
+        } else {
+            System.out.println("Error deleting contact");
+        }
+    }
+
+
+    private static void queryContact() {
+        System.out.println("Enter existing contact name:");
+        String name = scanner.nextLine();
+        Contact existingContactRecord = mobilePhone.queryContact(name);
+        if (existingContactRecord == null) {
+            System.out.println("Contact not found.");
+            return; //co wykonuje ta komenda?
+        }
+
+        System.out.println("Name: " + existingContactRecord.getName() +
+                " phone number is " + existingContactRecord.getPhoneNumber());
     }
 
     private static void startPhone() {
