@@ -10,4 +10,12 @@ public class Customer {
         this.name = name;
         this.listOfTransactions = listOfTransactions;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public ArrayList<Double> getListOfTransactions() {
+        return listOfTransactions;
+    }
 }
