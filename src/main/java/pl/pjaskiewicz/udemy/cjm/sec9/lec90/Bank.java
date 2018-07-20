@@ -20,7 +20,7 @@ public class Bank {
         return true;
     }
 
-    private int findBranch(String branchName) {
+    public int findBranch(String branchName) {
         //zwraca pozycje brancha. jak nie ma to -1
         for (int i = 0; i < listOfBranches.size(); i++) {
             Branch branch = listOfBranches.get(i);
@@ -31,26 +31,36 @@ public class Bank {
         return -1;
     }
 
-    private int findCustomerInBranch(String customerName, Branch branch) {
+    public int findCustomerInBranch(Customer customer, Branch branch) {
         //szuka nazwy brancha i zwraca pozycję na liście
-        if(findBranch(branch.getName())>=0){
-            
-        }
-
-        for (int i = 0; i < listOfBranches.get(); i++) {
-            Customer customer = listOfCustomers.get(i);
-            if (customer.getName().equals(customerName)) {
-                return i;
+        //szuka klienta na w tym branchu, jak nie ma to -1
+        if (findBranch(branch.getName()) >= 0) {
+            if (branch.findCustomer(customer.getName()) >= 0) {
+                System.out.println("Customer " + customer.getName() + " is in branch " + branch.getName());
+                return branch.findCustomer(customer.getName());
+            }else{
+                System.out.println("Customer " + customer.getName() + " is not in branch " + branch.getName());
+                return -1;
             }
         }
-        return -1;
+        System.out.println("The branch " + branch.getName() + " is not in the database");
+        return -2;
     }
 
     private boolean addCustomerWithTransactionToBranch(Branch branch, Customer customer, Double transaction) {
-        if ()
-
+        if(findCustomerInBranch(customer, branch)>=0){
+            System.out.println("Customer " + customer.getName() + " already exists in branch " + branch.getName());
+            return false;
+        }else if(findCustomerInBranch(customer, branch) == -1){
             branch.addCustomerWithTransaction(customer, transaction);
-        listOfBranches.add(branch);
-        return true;
+            System.out.println("Customer " + customer.getName() + " was successfully added to branch " + branch.getName());
+            return true;
+        }
+        System.out.println("Branch " + branch.getName() + " is not in database");
+        return false;
+
+
+
     }
+
 }

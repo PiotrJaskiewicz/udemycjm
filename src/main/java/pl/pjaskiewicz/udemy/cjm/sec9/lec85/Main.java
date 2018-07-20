@@ -1,8 +1,5 @@
 package pl.pjaskiewicz.udemy.cjm.sec9.lec85;
 
-import com.sun.org.apache.xalan.internal.xsltc.dom.SimpleResultTreeImpl;
-import pl.pjaskiewicz.udemy.cjm.utils.Utils;
-
 import java.util.Scanner;
 
 public class Main {

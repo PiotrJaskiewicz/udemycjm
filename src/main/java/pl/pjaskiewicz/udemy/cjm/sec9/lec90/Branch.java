@@ -43,7 +43,7 @@ public class Branch {
         }
     }
 
-    private int findCustomer(String customerName) {
+    public int findCustomer(String customerName) {
         //jezeli nazwa klienta zostanie znaleziona w bazie to zwroci jego pozycję na liście
         //jeżeli nie to zwróci -1
         for (int i = 0; i < listOfCustomers.size(); i++) {
