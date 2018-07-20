@@ -18,4 +18,8 @@ public class Customer {
     public ArrayList<Double> getListOfTransactions() {
         return listOfTransactions;
     }
+
+    public void addTransactionToCustomer(Double transaction){
+        this.listOfTransactions.add(transaction);
+    }
 }
