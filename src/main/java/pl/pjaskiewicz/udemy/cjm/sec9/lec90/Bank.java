@@ -11,12 +11,21 @@ public class Bank {
         this.listOfBranches = new ArrayList<>();
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public ArrayList<Branch> getListOfBranches() {
+        return listOfBranches;
+    }
+
     public boolean addBranch(Branch branch) {
         if (findBranch(branch.getName()) >= 0) {
-            System.out.println("Branch " + branch.getName() + "is already in data base");
+            System.out.println("Branch " + branch.getName() + " is already in database");
             return false;
         }
         listOfBranches.add(branch);
+        System.out.println("Branch " + branch.getName() + " added.");
         return true;
     }
 

@@ -31,10 +31,41 @@ public class Main {
     private static Bank bank = new Bank("ING");
 
     public static void main(String[] args) {
-
+      
         boolean quit = false;
         startBankApp();
         printActions();
+
+        while (!quit) {
+
+            int action = scanner.nextInt();
+            switch (action) {
+                case 0:
+                    System.out.println("Shutting down...\nSee you next time");
+                    quit = true;
+                    break;
+                case 1:
+                    printListOfBranches();
+                    System.out.println("Choose your action:");
+                    break;
+                case 2:
+                    addBranchToBank();
+                    System.out.println("Choose your action:");
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                case 7:
+                    printActions();
+                    break;
+            }
+
+        }
 
 
     }
@@ -43,15 +74,40 @@ public class Main {
         System.out.println("Welcome to brand new Bank App for ING.\n" + "Starting app...");
     }
 
-    private static void printActions(){
+    private static void printListOfBranches() {
+        System.out.println("List of branches:");
+        for (int i = 0; i < bank.getListOfBranches().size(); i++) {
+            System.out.println((i + 1) + ". " +
+                    bank.getListOfBranches().get(i).getName());
+        }
+    }
+
+    private static void addBranchToBank() {
+        System.out.println("Type a name of new branch");
+        scanner.nextLine(); //musialem to wpisac aby scanner odczytywal. why?
+        String branchName = scanner.nextLine();
+        Branch branch = new Branch(branchName);
+        bank.addBranch(branch);
+
+
+
+
+    }
+
+    private static void printListOfCustomers(Branch branch) {
+
+    }
+
+    private static void printActions() {
         System.out.println("\n Available actions, press: ");
         System.out.println("0 - to shut down\n" +
-                "1 - to print contacts\n" +
-                "2 - to add a new contact\n" +
-                "3 - to update an existing contact\n" +
-                "4 - to remove an existing contact\n" +
-                "5 - query if contact exist\n" +
-                "6 - to print a list of available actions.");
+                "1 - to print list of branches\n" +
+                "2 - to add branch\n" +
+                "3 - to print list of customers for particular branch\n" +
+                "4 - to add customer to branch\n" +
+                "5 - to add transaction to customer\n" +
+                "6 - to \n" +
+                "7 - to print a list of available actions.");
         System.out.println("Choose your action: ");
     }
 }

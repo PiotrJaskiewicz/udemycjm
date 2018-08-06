@@ -19,6 +19,7 @@ public class Branch {
         return listOfCustomers;
     }
 
+
     public boolean addCustomerWithTransaction(Customer customer, Double transaction) {
         //sprawdza czy customer juz istnieje na liscie klientów. tak->return int>=0, nie -> return int =-1
         if (findCustomer(customer.getName()) >= 1) {
