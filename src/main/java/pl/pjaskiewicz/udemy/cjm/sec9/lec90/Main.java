@@ -100,13 +100,9 @@ public class Main {
     }
 
     public static void printListOfCustomers() {
-        System.out.println("List of branches:");
-        for (int i = 0; i < bank.getListOfBranches().size(); i++) {
-            System.out.println((i + 1) + ". " +
-                    bank.getListOfBranches().get(i).getName());
-        }
-        
-        System.out.println("Enter the name of the branch for which you want to check customers");
+        printAvailableBranches();
+
+        System.out.println("\nEnter the name of the branch for which you want to check customers");
         scanner.nextLine();
         String branchName = scanner.nextLine();
         int branchPosition = bank.findBranch(branchName);
@@ -121,6 +117,8 @@ public class Main {
     }
 
     private static void addCustomerToBranch() {
+       printAvailableBranches();
+
         System.out.println("Enter the name of the branch for which you want to add customer");
         scanner.nextLine();
         String branchName = scanner.nextLine();
@@ -149,6 +147,11 @@ public class Main {
     }
 
     private static void addTransactionToCustomer() {
+        System.out.println("List of available branches:");
+        for (int i = 0; i < bank.getListOfBranches().size(); i++) {
+            System.out.print((i + 1) + ". " +
+                    bank.getListOfBranches().get(i).getName() + ", ");
+        }
         System.out.println("Enter the name of the branch for which you want to add customers");
         scanner.nextLine(); //sprawdzic
         String branchName = scanner.nextLine();
@@ -181,5 +184,17 @@ public class Main {
                 "6 - to xxxxxxxxxxx\n" +
                 "7 - to print a list of available actions.");
         System.out.println("Choose your action: ");
+    }
+
+    private static void printAvailableBranches() {
+        System.out.println("List of available branches:");
+        if (bank.getListOfBranches().size() == 0) {
+            System.out.println("There is no branches for " + bank.getName() + " bank.");
+        } else {
+            for (int i = 0; i < bank.getListOfBranches().size(); i++) {
+                System.out.print((i + 1) + ". " +
+                        bank.getListOfBranches().get(i).getName() + ", ");
+            }
+        }
     }
 }
