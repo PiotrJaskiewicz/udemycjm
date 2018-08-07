@@ -20,7 +20,5 @@ public class Customer {
         return listOfTransactions;
     }
 
-    public void addTransactionToCustomer(Double transaction){
-        this.listOfTransactions.add(transaction);
-    }
+
 }

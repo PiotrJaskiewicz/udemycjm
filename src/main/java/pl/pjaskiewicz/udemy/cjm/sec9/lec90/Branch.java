@@ -49,7 +49,7 @@ public class Branch {
             //jezeli nie ma takiego klienta to zostanie utworzony
             addCustomerWithTransaction(customer, transaction);
             System.out.println("Customer " + customer.getName() +
-                    " added to database with transaction " + transaction + ".");
+                    " added to database with initial transaction " + transaction + ".");
         }
     }
 

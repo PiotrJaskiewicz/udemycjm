@@ -72,7 +72,7 @@ public class Bank {
     public boolean addTransactionToCustomerInBranch(Branch branch, Customer customer, Double transaction) {
         if (findCustomerInBranch(customer, branch) >= 0) {
             System.out.println("Customer " + customer.getName() + " already exists in branch " + branch.getName());
-            customer.addTransactionToCustomer(transaction);
+            customer.getListOfTransactions().add(transaction);
             return true;
         } else if (findCustomerInBranch(customer, branch) == -1) {
             System.out.println("Customer " + customer.getName() + " is not in the " + branch.getName());
