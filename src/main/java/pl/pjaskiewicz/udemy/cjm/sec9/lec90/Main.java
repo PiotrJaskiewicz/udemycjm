@@ -117,9 +117,9 @@ public class Main {
     }
 
     private static void addCustomerToBranch() {
-       printAvailableBranches();
+        printAvailableBranches();
 
-        System.out.println("Enter the name of the branch for which you want to add customer");
+        System.out.println("\nEnter the name of the branch for which you want to add customer");
         scanner.nextLine();
         String branchName = scanner.nextLine();
         int branchPosition = bank.findBranch(branchName);
@@ -147,12 +147,8 @@ public class Main {
     }
 
     private static void addTransactionToCustomer() {
-        System.out.println("List of available branches:");
-        for (int i = 0; i < bank.getListOfBranches().size(); i++) {
-            System.out.print((i + 1) + ". " +
-                    bank.getListOfBranches().get(i).getName() + ", ");
-        }
-        System.out.println("Enter the name of the branch for which you want to add customers");
+        printAvailableBranches();
+        System.out.println("\nEnter the name of the branch for which you want to add customers");
         scanner.nextLine(); //sprawdzic
         String branchName = scanner.nextLine();
         int branchPosition = bank.findBranch(branchName);
@@ -161,12 +157,15 @@ public class Main {
         } else {
 
             System.out.println("Enter the name of the customer for which you want to add transaction: ");
-
             String customerName = scanner.nextLine();
-            Customer customer = new Customer(customerName);
+
 
             System.out.println("Enter transaction to above customer: ");
             double transaction = scanner.nextDouble();
+
+            int customerPosition = bank.getListOfBranches().get(branchPosition).findCustomer(customerName);
+
+            Customer customer = bank.getListOfBranches().get(branchPosition).getListOfCustomers().get(customerPosition);
 
             bank.getListOfBranches().get(branchPosition).addTransactionToCustomer(customer, transaction);
 
