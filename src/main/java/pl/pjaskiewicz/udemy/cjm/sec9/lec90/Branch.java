@@ -19,11 +19,20 @@ public class Branch {
         return listOfCustomers;
     }
 
+    public void printListOfCustomers() {
+        for (int i = 0; i < this.listOfCustomers.size(); i++) {
+            System.out.println((i + 1) + ". " + this.listOfCustomers.get(i).getName());
+
+            for (int j = 0; j < this.listOfCustomers.get(i).getListOfTransactions().size(); j++) {
+                System.out.println("\t" + (j + 1) + ". " + this.listOfCustomers.get(i).getListOfTransactions().get(j));
+            }
+        }
+    }
+
 
     public boolean addCustomerWithTransaction(Customer customer, Double transaction) {
         //sprawdza czy customer juz istnieje na liscie klientów. tak->return int>=0, nie -> return int =-1
-        if (findCustomer(customer.getName()) >= 1) {
-            System.out.println("Customer " + customer.getName() + "is already on database");
+        if (findCustomer(customer.getName()) >= 0) {
             return false;
         }
         listOfCustomers.add(customer);
@@ -33,13 +42,13 @@ public class Branch {
     }
 
     public void addTransactionToCustomer(Customer customer, Double transaction) {
-        if (findCustomer(customer.getName()) >= 1) {
+        if (findCustomer(customer.getName()) >= 0) {
             customer.getListOfTransactions().add(transaction);
             System.out.println("Transaction " + transaction + " added to " + customer.getName());
         } else {
             //jezeli nie ma takiego klienta to zostanie utworzony
             addCustomerWithTransaction(customer, transaction);
-            System.out.println("Customer " + customer +
+            System.out.println("Customer " + customer.getName() +
                     " added to database with transaction " + transaction + ".");
         }
     }

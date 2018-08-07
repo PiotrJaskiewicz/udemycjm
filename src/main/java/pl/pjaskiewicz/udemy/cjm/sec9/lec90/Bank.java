@@ -21,7 +21,7 @@ public class Bank {
 
     public boolean addBranch(Branch branch) {
         if (findBranch(branch.getName()) >= 0) {
-            System.out.println("Branch " + branch.getName() + " is already in database");
+            System.out.println("Branch " + branch.getName() + " is already in database.\nPlease choose another name.");
             return false;
         }
         listOfBranches.add(branch);

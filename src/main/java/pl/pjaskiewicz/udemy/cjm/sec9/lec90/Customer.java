@@ -15,6 +15,7 @@ public class Customer {
         return name;
     }
 
+
     public ArrayList<Double> getListOfTransactions() {
         return listOfTransactions;
     }
