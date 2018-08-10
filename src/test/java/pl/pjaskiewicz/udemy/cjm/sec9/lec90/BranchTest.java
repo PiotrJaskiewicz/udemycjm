@@ -1,8 +1,8 @@
 package pl.pjaskiewicz.udemy.cjm.sec9.lec90;
 
 import org.junit.Test;
-
-import java.util.ArrayList;
+import pl.pjaskiewicz.udemy.cjm.sec9.lec90.PJ.Branch;
+import pl.pjaskiewicz.udemy.cjm.sec9.lec90.PJ.Customer;
 
 import static org.junit.Assert.*;
 

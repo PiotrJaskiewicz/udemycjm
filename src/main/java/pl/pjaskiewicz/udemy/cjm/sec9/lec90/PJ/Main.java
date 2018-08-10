@@ -1,6 +1,5 @@
-package pl.pjaskiewicz.udemy.cjm.sec9.lec90;
+package pl.pjaskiewicz.udemy.cjm.sec9.lec90.PJ;
 
-import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
 public class Main {
