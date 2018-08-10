@@ -41,17 +41,7 @@ public class Branch {
 
     }
 
-    public void addTransactionToCustomer(Customer customer, Double transaction) {
-        if (findCustomer(customer.getName()) >= 0) {
-            customer.getListOfTransactions().add(transaction);
-            System.out.println("Transaction " + transaction + " added to " + customer.getName());
-        } else {
-            //jezeli nie ma takiego klienta to zostanie utworzony
-            addCustomerWithTransaction(customer, transaction);
-            System.out.println("Customer " + customer.getName() +
-                    " added to database with initial transaction " + transaction + ".");
-        }
-    }
+
 
     public int findCustomer(String customerName) {
         //jezeli nazwa klienta zostanie znaleziona w bazie to zwroci jego pozycję na liście

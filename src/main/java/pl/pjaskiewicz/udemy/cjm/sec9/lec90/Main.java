@@ -47,27 +47,25 @@ public class Main {
                     break;
                 case 1:
                     printListOfBranches();
-                    System.out.println("\nChoose your action (7 for instructions):");
+                    System.out.println("\nChoose your action (6 for instructions):");
                     break;
                 case 2:
                     addBranchToBank();
-                    System.out.println("\nChoose your action (7 for instructions):");
+                    System.out.println("\nChoose your action (6 for instructions):");
                     break;
                 case 3:
                     printListOfCustomers();
-                    System.out.println("\nChoose your action (7 for instructions):");
+                    System.out.println("\nChoose your action (6 for instructions):");
                     break;
                 case 4:
                     addCustomerToBranch();
-                    System.out.println("\nChoose your action (7 for instructions):");
+                    System.out.println("\nChoose your action (6 for instructions):");
                     break;
                 case 5:
                     addTransactionToCustomer();
-                    System.out.println("\nChoose your action (7 for instructions):");
+                    System.out.println("\nChoose your action (6 for instructions):");
                     break;
                 case 6:
-                    break;
-                case 7:
                     printActions();
                     break;
             }
@@ -101,18 +99,18 @@ public class Main {
 
     public static void printListOfCustomers() {
         printAvailableBranches();
+        if (bank.getListOfBranches().size() > 0) {
+            System.out.println("\nEnter the name of the branch for which you want to check customers");
+            scanner.nextLine();
+            String branchName = scanner.nextLine();
+            int branchPosition = bank.findBranch(branchName);
+            if (branchPosition == -1) {
+                System.out.println("There is no branch " + branchName + " in database");
+            } else {
 
-        System.out.println("\nEnter the name of the branch for which you want to check customers");
-        scanner.nextLine();
-        String branchName = scanner.nextLine();
-        int branchPosition = bank.findBranch(branchName);
-        if (branchPosition == -1) {
-            System.out.println("There is no branch " + branchName + " in database");
-        } else {
-
-            System.out.println("List of customers for branch " + branchName + ":");
-            bank.getListOfBranches().get(branchPosition).printListOfCustomers();
-
+                System.out.println("List of customers for branch " + branchName + ":");
+                bank.getListOfBranches().get(branchPosition).printListOfCustomers();
+            }
         }
     }
 
@@ -148,27 +146,34 @@ public class Main {
 
     private static void addTransactionToCustomer() {
         printAvailableBranches();
-        System.out.println("\nEnter the name of the branch for which you want to add customers");
-        scanner.nextLine(); //sprawdzic
-        String branchName = scanner.nextLine();
-        int branchPosition = bank.findBranch(branchName);
-        if (branchPosition == -1) {
-            System.out.println("There is no branch " + branchName + " in database.");
-        } else {
-
-            System.out.println("Enter the name of the customer for which you want to add transaction: ");
-            String customerName = scanner.nextLine();
 
 
-            System.out.println("Enter transaction to above customer: ");
-            double transaction = scanner.nextDouble();
+        if (bank.getListOfBranches().size() > 0) {
+            System.out.println("\nEnter the name of the branch for which you want to add customers");
+            scanner.nextLine(); //sprawdzic
+            String branchName = scanner.nextLine();
+            int branchPosition = bank.findBranch(branchName);
+            if (branchPosition == -1) {
+                System.out.println("There is no branch " + branchName + " in database.");
+            } else {
 
-            int customerPosition = bank.getListOfBranches().get(branchPosition).findCustomer(customerName);
+                System.out.println("Enter the name of the customer for which you want to add transaction: ");
+                String customerName = scanner.nextLine();
 
-            Customer customer = bank.getListOfBranches().get(branchPosition).getListOfCustomers().get(customerPosition);
 
-            bank.getListOfBranches().get(branchPosition).addTransactionToCustomer(customer, transaction);
+                System.out.println("Enter transaction to above customer: ");
+                double transaction = scanner.nextDouble();
 
+                int customerPosition = bank.getListOfBranches().get(branchPosition).findCustomer(customerName);
+
+                if (customerPosition >= 0) {
+
+                    bank.getListOfBranches().get(branchPosition).getListOfCustomers().get(customerPosition).getListOfTransactions().add(transaction);
+                    System.out.println("Transaction " + transaction + " added to " + customerName);
+                } else {
+                    System.out.println("There is no " + customerName + " in the branch " + branchName + ".");
+                }
+            }
         }
     }
 
@@ -177,11 +182,10 @@ public class Main {
         System.out.println("0 - to shut down\n" +
                 "1 - to print list of branches\n" +
                 "2 - to add branch\n" +
-                "3 - to print list of customers with transactions for particular branch\n" +
+                "3 - to print list of customers with transactions\n" +
                 "4 - to add customer to branch\n" +
                 "5 - to add transaction to customer\n" +
-                "6 - to xxxxxxxxxxx\n" +
-                "7 - to print a list of available actions.");
+                "6 - to print a list of available actions.");
         System.out.println("Choose your action: ");
     }
 
