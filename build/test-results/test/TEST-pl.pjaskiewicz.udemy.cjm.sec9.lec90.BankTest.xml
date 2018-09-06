@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="pl.pjaskiewicz.udemy.cjm.sec9.lec90.BankTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-07-20T08:14:36" hostname="DESKTOP-LOCDJ4N" time="0.003">
+<testsuite name="pl.pjaskiewicz.udemy.cjm.sec9.lec90.BankTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-09-06T16:55:44" hostname="DESKTOP-LOCDJ4N" time="0.005">
   <properties/>
-  <testcase name="findBranch" classname="pl.pjaskiewicz.udemy.cjm.sec9.lec90.BankTest" time="0.0"/>
-  <testcase name="findCustomerInBranch" classname="pl.pjaskiewicz.udemy.cjm.sec9.lec90.BankTest" time="0.003"/>
-  <system-out><![CDATA[Customer Piotr is in branch alfa
+  <testcase name="findBranch" classname="pl.pjaskiewicz.udemy.cjm.sec9.lec90.BankTest" time="0.001"/>
+  <testcase name="findCustomerInBranch" classname="pl.pjaskiewicz.udemy.cjm.sec9.lec90.BankTest" time="0.004"/>
+  <system-out><![CDATA[Branch alfa added.
+Branch bravo added.
+Branch charlie added.
+Branch delta added.
+Branch alfa added.
+Branch bravo added.
+Branch charlie added.
+Branch delta added.
+Customer Piotr is in branch alfa
 Customer Dalia is in branch alfa
 Customer Jagoda is in branch alfa
 Customer Leon is in branch alfa

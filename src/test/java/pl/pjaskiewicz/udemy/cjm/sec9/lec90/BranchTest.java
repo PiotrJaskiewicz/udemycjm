@@ -19,7 +19,7 @@ public class BranchTest {
     @Test
     public void printListOfCustomers() {
         gdansk.addCustomerWithTransaction(piotr, 1000.0);
-        gdansk.addTransactionToCustomer(piotr, 1500.0);
+
         gdansk.addCustomerWithTransaction(dalia, 2000.0);
         gdansk.addCustomerWithTransaction(leon, 3000.0);
 
@@ -36,13 +36,11 @@ public class BranchTest {
     @Test
     public void addTransactionToCustomer() {
         gdansk.addCustomerWithTransaction(piotr, 1000.0);
-        gdansk.addTransactionToCustomer(piotr, 1000.0);
-        gdansk.addTransactionToCustomer(piotr, 1500.0);
-        gdansk.addTransactionToCustomer(piotr, 2000.0);
+
 
         gdansk.addCustomerWithTransaction(dalia, 2000.0);
 
-        gdansk.addTransactionToCustomer(leon, 3000.0);
+
 
         gdansk.printListOfCustomers();
 

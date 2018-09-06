@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="pl.pjaskiewicz.udemy.cjm.sec9.lec90.MainTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-09-06T16:55:44" hostname="DESKTOP-LOCDJ4N" time="0.0">
+  <properties/>
+  <testcase name="printListOfCustomers" classname="pl.pjaskiewicz.udemy.cjm.sec9.lec90.MainTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

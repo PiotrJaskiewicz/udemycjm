@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="pl.pjaskiewicz.udemy.cjm.sec9.lec90.BranchTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2018-09-06T16:55:44" hostname="DESKTOP-LOCDJ4N" time="0.005">
+  <properties/>
+  <testcase name="addCustomerWithTransaction" classname="pl.pjaskiewicz.udemy.cjm.sec9.lec90.BranchTest" time="0.0"/>
+  <testcase name="findCustomer" classname="pl.pjaskiewicz.udemy.cjm.sec9.lec90.BranchTest" time="0.001"/>
+  <testcase name="addTransactionToCustomer" classname="pl.pjaskiewicz.udemy.cjm.sec9.lec90.BranchTest" time="0.001"/>
+  <testcase name="printListOfCustomers" classname="pl.pjaskiewicz.udemy.cjm.sec9.lec90.BranchTest" time="0.001"/>
+  <system-out><![CDATA[1. Piotr
+	1. 1000.0
+2. Dalia
+	1. 2000.0
+1. Piotr
+	1. 1000.0
+2. Dalia
+	1. 2000.0
+3. Leon
+	1. 3000.0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

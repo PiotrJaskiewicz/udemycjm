@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="pl.pjaskiewicz.udemy.cjm.sec19.lec293.BankAccountTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2018-07-20T08:14:36" hostname="DESKTOP-LOCDJ4N" time="0.028">
+<testsuite name="pl.pjaskiewicz.udemy.cjm.sec19.lec293.BankAccountTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2018-09-06T16:55:43" hostname="DESKTOP-LOCDJ4N" time="0.007">
   <properties/>
-  <testcase name="withdrawal" classname="pl.pjaskiewicz.udemy.cjm.sec19.lec293.BankAccountTest" time="0.003"/>
+  <testcase name="withdrawal" classname="pl.pjaskiewicz.udemy.cjm.sec19.lec293.BankAccountTest" time="0.004"/>
   <testcase name="getBalance_withdraw" classname="pl.pjaskiewicz.udemy.cjm.sec19.lec293.BankAccountTest" time="0.0"/>
-  <testcase name="isChecking_true" classname="pl.pjaskiewicz.udemy.cjm.sec19.lec293.BankAccountTest" time="0.002"/>
-  <testcase name="getBalance_deposit" classname="pl.pjaskiewicz.udemy.cjm.sec19.lec293.BankAccountTest" time="0.001"/>
-  <testcase name="deposit" classname="pl.pjaskiewicz.udemy.cjm.sec19.lec293.BankAccountTest" time="0.0"/>
+  <testcase name="isChecking_true" classname="pl.pjaskiewicz.udemy.cjm.sec19.lec293.BankAccountTest" time="0.0"/>
+  <testcase name="getBalance_deposit" classname="pl.pjaskiewicz.udemy.cjm.sec19.lec293.BankAccountTest" time="0.0"/>
+  <testcase name="deposit" classname="pl.pjaskiewicz.udemy.cjm.sec19.lec293.BankAccountTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
